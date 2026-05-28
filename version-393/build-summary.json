@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-05-28T00:07:59.975943Z",
+  "movie_count": 2000,
+  "detail_pages": 2000,
+  "category_counts": {
+    "国产高分": 250,
+    "悬疑推理": 250,
+    "奇幻科幻": 250,
+    "都市爱情": 250,
+    "喜剧治愈": 250,
+    "家庭年代": 250,
+    "犯罪惊悚": 250,
+    "海外佳作": 250
+  },
+  "m3u8_sources": 20,
+  "note": "Place 1.jpg to 150.jpg in the website root to activate all cover and hero images."
+}

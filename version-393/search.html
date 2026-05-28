@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>搜索筛选-国产高分电视剧-高分剧集榜单收录-高清剧集在线观看</title>
+  <meta name="description" content="国产高分电视剧搜索页，可按片名、标签、年份、地区和分类筛选高清剧集。">
+  <meta name="keywords" content="国产高分电视剧,高分国产剧,电视剧榜单,高清剧集,精选剧集,在线观看,国产电视剧">
+  <meta name="robots" content="index,follow">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/app.js" defer></script>
+  <script src="assets/movies-data.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="国产高分剧集 首页">
+      <span class="brand__mark" aria-hidden="true">剧</span>
+      <span class="brand__text">
+        <strong>国产高分剧集</strong>
+        <small>高分剧集榜单收录</small>
+      </span>
+    </a>
+    <nav class="desktop-nav" aria-label="主导航">
+        <a class="" href="index.html">首页</a>
+        <a class="" href="categories.html">分类</a>
+        <a class="" href="rankings.html">排行榜</a>
+        <a class="is-active" href="search.html">搜索</a>
+    </nav>
+    <button class="mobile-toggle" type="button" aria-label="打开导航" data-mobile-toggle>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" data-mobile-nav>
+        <a href="index.html">首页</a>
+        <a href="categories.html">分类</a>
+        <a href="rankings.html">排行榜</a>
+        <a href="search.html">搜索</a>
+  </nav>
+</header>
+<main data-search-root>
+  <section class="page-hero">
+    <div class="container page-title">
+      <div class="breadcrumb"><a href="index.html">首页</a><span>/</span><span>搜索筛选</span></div>
+      <h1>搜索筛选</h1>
+      <p>使用片名、地区、年份、类型、标签进行站内检索。</p>
+    </div>
+  </section>
+  <section class="section section--white">
+    <div class="container">
+      <div class="filter-bar">
+        <input type="search" name="globalKeyword" placeholder="输入片名、标签、地区或类型" aria-label="搜索关键词">
+        <select name="globalRegion" aria-label="按地区筛选">
+          <option value="">全部地区</option>
+          <option value="中国">中国</option>
+          <option value="中国/加拿大">中国/加拿大</option>
+          <option value="中国内地">中国内地</option>
+          <option value="中国台湾">中国台湾</option>
+          <option value="中国大陆">中国大陆</option>
+          <option value="中国大陆/台湾">中国大陆/台湾</option>
+          <option value="中国大陆/意大利">中国大陆/意大利</option>
+          <option value="中国大陆/日本">中国大陆/日本</option>
+          <option value="中国大陆/香港">中国大陆/香港</option>
+          <option value="中国澳门/中国大陆">中国澳门/中国大陆</option>
+          <option value="中国香港">中国香港</option>
+          <option value="中国香港/中国大陆">中国香港/中国大陆</option>
+          <option value="中国香港/日本">中国香港/日本</option>
+          <option value="中国香港/法国">中国香港/法国</option>
+          <option value="中国香港/泰国">中国香港/泰国</option>
+          <option value="中国香港/英国">中国香港/英国</option>
+          <option value="丹麦">丹麦</option>
+          <option value="乌克兰">乌克兰</option>
+          <option value="伊朗">伊朗</option>
+          <option value="伊朗/法国">伊朗/法国</option>
+          <option value="俄罗斯">俄罗斯</option>
+          <option value="俄罗斯/中国大陆">俄罗斯/中国大陆</option>
+          <option value="俄罗斯/美国">俄罗斯/美国</option>
+          <option value="冰岛">冰岛</option>
+          <option value="加拿大">加拿大</option>
+          <option value="加拿大/法国">加拿大/法国</option>
+          <option value="华语">华语</option>
+          <option value="南极">南极</option>
+          <option value="印度">印度</option>
+          <option value="台湾">台湾</option>
+          <option value="哈萨克斯坦">哈萨克斯坦</option>
+          <option value="哥伦比亚/美国">哥伦比亚/美国</option>
+          <option value="土耳其">土耳其</option>
+          <option value="土耳其/德国">土耳其/德国</option>
+          <option value="墨西哥">墨西哥</option>
+          <option value="墨西哥/美国">墨西哥/美国</option>
+          <option value="多国">多国</option>
+          <option value="奥地利">奥地利</option>
+          <option value="奥地利/德国">奥地利/德国</option>
+          <option value="尼日利亚">尼日利亚</option>
+          <option value="巴基斯坦/英国">巴基斯坦/英国</option>
+          <option value="巴西">巴西</option>
+          <option value="希腊">希腊</option>
+          <option value="希腊/法国">希腊/法国</option>
+          <option value="德国">德国</option>
+          <option value="德国/意大利">德国/意大利</option>
+          <option value="德国/波兰">德国/波兰</option>
+          <option value="德国/美国">德国/美国</option>
+          <option value="德国/英国">德国/英国</option>
+          <option value="意大利">意大利</option>
+          <option value="意大利/法国">意大利/法国</option>
+          <option value="意大利/美国">意大利/美国</option>
+          <option value="意大利/西班牙">意大利/西班牙</option>
+          <option value="意大利/西班牙/西德">意大利/西班牙/西德</option>
+          <option value="挪威">挪威</option>
+          <option value="挪威/冰岛">挪威/冰岛</option>
+          <option value="捷克">捷克</option>
+          <option value="新加坡">新加坡</option>
+          <option value="新加坡/马来西亚">新加坡/马来西亚</option>
+          <option value="新西兰">新西兰</option>
+          <option value="日本">日本</option>
+          <option value="日本,中国大陆">日本,中国大陆</option>
+          <option value="日本/中国香港">日本/中国香港</option>
+          <option value="日本/比利时">日本/比利时</option>
+          <option value="日本/法国">日本/法国</option>
+          <option value="日本/美国">日本/美国</option>
+          <option value="日本/韩国">日本/韩国</option>
+          <option value="欧洲">欧洲</option>
+          <option value="比利时">比利时</option>
+          <option value="法国">法国</option>
+          <option value="法国,德国">法国,德国</option>
+          <option value="法国,意大利">法国,意大利</option>
+          <option value="法国,比利时">法国,比利时</option>
+          <option value="法国,韩国">法国,韩国</option>
+          <option value="法国/中国大陆">法国/中国大陆</option>
+          <option value="法国/以色列/巴勒斯坦">法国/以色列/巴勒斯坦</option>
+          <option value="法国/伊拉克">法国/伊拉克</option>
+          <option value="法国/加拿大">法国/加拿大</option>
+          <option value="法国/德国">法国/德国</option>
+          <option value="法国/意大利">法国/意大利</option>
+          <option value="法国/日本">法国/日本</option>
+          <option value="法国/比利时">法国/比利时</option>
+          <option value="法国/美国">法国/美国</option>
+          <option value="法国/英国">法国/英国</option>
+          <option value="法国/越南">法国/越南</option>
+          <option value="波兰">波兰</option>
+          <option value="泰国">泰国</option>
+          <option value="泰国,韩国">泰国,韩国</option>
+          <option value="澳大利亚">澳大利亚</option>
+          <option value="澳大利亚,美国">澳大利亚,美国</option>
+          <option value="澳大利亚/美国">澳大利亚/美国</option>
+          <option value="澳大利亚/英国">澳大利亚/英国</option>
+          <option value="爱尔兰">爱尔兰</option>
+          <option value="爱尔兰,英国">爱尔兰,英国</option>
+          <option value="瑞典">瑞典</option>
+          <option value="瑞典/挪威">瑞典/挪威</option>
+          <option value="美国">美国</option>
+          <option value="美国,加拿大">美国,加拿大</option>
+          <option value="美国,英国">美国,英国</option>
+          <option value="美国/中国香港合拍">美国/中国香港合拍</option>
+          <option value="美国/加拿大">美国/加拿大</option>
+          <option value="美国/墨西哥">美国/墨西哥</option>
+          <option value="美国/德国">美国/德国</option>
+          <option value="美国/日本">美国/日本</option>
+          <option value="美国/法国">美国/法国</option>
+          <option value="美国/澳大利亚">美国/澳大利亚</option>
+          <option value="美国/英国">美国/英国</option>
+          <option value="美国/阿富汗">美国/阿富汗</option>
+          <option value="美国/韩国">美国/韩国</option>
+          <option value="芬兰">芬兰</option>
+          <option value="芬兰/德国">芬兰/德国</option>
+          <option value="苏联">苏联</option>
+          <option value="英国">英国</option>
+          <option value="英国,中国">英国,中国</option>
+          <option value="英国/加拿大">英国/加拿大</option>
+          <option value="英国/德国">英国/德国</option>
+          <option value="英国/美国">英国/美国</option>
+          <option value="荷兰">荷兰</option>
+          <option value="西班牙">西班牙</option>
+          <option value="西班牙/哥伦比亚">西班牙/哥伦比亚</option>
+          <option value="西班牙/墨西哥">西班牙/墨西哥</option>
+          <option value="西班牙/法国">西班牙/法国</option>
+          <option value="西班牙/美国">西班牙/美国</option>
+          <option value="西班牙/阿根廷">西班牙/阿根廷</option>
+          <option value="越南">越南</option>
+          <option value="阿根廷">阿根廷</option>
+          <option value="非洲/英国合拍">非洲/英国合拍</option>
+          <option value="韩国">韩国</option>
+          <option value="韩国,德国">韩国,德国</option>
+          <option value="香港">香港</option>
+          <option value="香港/美国">香港/美国</option>
+          <option value="马来西亚">马来西亚</option>
+        </select>
+        <select name="globalCategory" aria-label="按分类筛选">
+          <option value="">全部分类</option>
+          <option value="国产高分">国产高分</option>
+          <option value="悬疑推理">悬疑推理</option>
+          <option value="奇幻科幻">奇幻科幻</option>
+          <option value="都市爱情">都市爱情</option>
+          <option value="喜剧治愈">喜剧治愈</option>
+          <option value="家庭年代">家庭年代</option>
+          <option value="犯罪惊悚">犯罪惊悚</option>
+          <option value="海外佳作">海外佳作</option>
+        </select>
+        <a class="btn" href="categories.html">分类总览</a>
+      </div>
+      <p class="search-result-count" data-search-count>默认展示精选内容。</p>
+    </div>
+  </section>
+  <section class="section section--soft">
+    <div class="container">
+      <div class="grid grid--4" data-search-results>
+<article class="movie-card" data-title="开局十个大帝都是我徒弟" data-region="中国大陆" data-year="2024" data-genre="奇幻/喜剧/仙侠" data-category="奇幻科幻">
+  <a class="movie-card__cover" href="details/0001.html" aria-label="观看 开局十个大帝都是我徒弟">
+    <img src="1.jpg" alt="开局十个大帝都是我徒弟" loading="lazy">
+    <span class="movie-card__score">9.9</span>
+  </a>
+  <div class="movie-card__body">
+    <div class="movie-card__meta">
+      <span>2024</span>
+      <span>中国大陆</span>
+      <span>网络剧</span>
+    </div>
+    <h3><a href="details/0001.html">开局十个大帝都是我徒弟</a></h3>
+      <p class="movie-card__desc">穿越到修仙界的社畜发现,这片大陆最强的十个大帝,全是自己失忆前收过的徒弟,而现在他们都在追杀他。</p>
+    <div class="movie-card__tags">
+        <span>#穿越</span>
+        <span>#师徒</span>
+        <span>#爽文</span>
+    </div>
+  </div>
+</article>
+<article class="movie-card" data-title="主人公" data-region="中国大陆" data-year="2025" data-genre="悬疑/喜剧" data-category="国产高分">
+  <a class="movie-card__cover" href="details/0002.html" aria-label="观看 主人公">
+    <img src="2.jpg" alt="主人公" loading="lazy">
+    <span class="movie-card__score">9.8</span>
+  </a>
+  <div class="movie-card__body">
+    <div class="movie-card__meta">
+      <span>2025</span>
+      <span>中国大陆</span>
+      <span>网络剧</span>
+    </div>
+    <h3><a href="details/0002.html">主人公</a></h3>
+      <p class="movie-card__desc">一个配角突然意识到自己是NPC,为了活命必须抢在主角之前完成剧情任务。</p>
+    <div class="movie-card__tags">
+        <span>#打破第四面墙</span>
+        <span>#剧中剧</span>
+        <span>#反套路</span>
+    </div>
+  </div>
+</article>
+<article class="movie-card" data-title="明日之后" data-region="韩国" data-year="2024" data-genre="科幻,悬疑" data-category="奇幻科幻">
+  <a class="movie-card__cover" href="details/0003.html" aria-label="观看 明日之后">
+    <img src="3.jpg" alt="明日之后" loading="lazy">
+    <span class="movie-card__score">9.6</span>
+  </a>
+  <div class="movie-card__body">
+    <div class="movie-card__meta">
+      <span>2024</span>
+      <span>韩国</span>
+      <span>剧集</span>
+    </div>
+    <h3><a href="details/0003.html">明日之后</a></h3>
+      <p class="movie-card__desc">距离世界毁灭还剩24小时,全人类被重置了记忆,只有一名女子记得“明天之后”会发生什么。</p>
+    <div class="movie-card__tags">
+        <span>#末日</span>
+        <span>#时间循环</span>
+        <span>#记忆移植</span>
+    </div>
+  </div>
+</article>
+<article class="movie-card" data-title="钢铁的城" data-region="中国大陆" data-year="2024" data-genre="剧情,年代" data-category="家庭年代">
+  <a class="movie-card__cover" href="details/0004.html" aria-label="观看 钢铁的城">
+    <img src="4.jpg" alt="钢铁的城" loading="lazy">
+    <span class="movie-card__score">9.6</span>
+  </a>
+  <div class="movie-card__body">
+    <div class="movie-card__meta">
+      <span>2024</span>
+      <span>中国大陆</span>
+      <span>剧集</span>
+    </div>
+    <h3><a href="details/0004.html">钢铁的城</a></h3>
+      <p class="movie-card__desc">一座东北钢铁厂从上世纪90年代到如今的兴衰浮沉,映射三代工人的命运抉择。</p>
+    <div class="movie-card__tags">
+        <span>#工业改革</span>
+        <span>#东北往事</span>
+        <span>#三代人</span>
+    </div>
+  </div>
+</article>
+<article class="movie-card" data-title="离乡人" data-region="中国大陆" data-year="2026" data-genre="剧情/家庭" data-category="都市爱情">
+  <a class="movie-card__cover" href="details/0005.html" aria-label="观看 离乡人">
+    <img src="5.jpg" alt="离乡人" loading="lazy">
+    <span class="movie-card__score">9.5</span>
+  </a>
+  <div class="movie-card__body">
+    <div class="movie-card__meta">
+      <span>2026</span>
+      <span>中国大陆</span>
+      <span>剧集</span>
+    </div>
+    <h3><a href="details/0005.html">离乡人</a></h3>
+      <p class="movie-card__desc">在北京做了 15 年建筑工的老郭被“优化”,回到老家发现儿子成了“最熟悉的陌生人”。</p>
+    <div class="movie-card__tags">
+        <span>#农民工</span>
+        <span>#二代返乡</span>
+        <span>#乡村再造</span>
+    </div>
+  </div>
+</article>
+<article class="movie-card" data-title="无罪之凶" data-region="美国" data-year="2023" data-genre="犯罪/惊悚" data-category="犯罪惊悚">
+  <a class="movie-card__cover" href="details/0006.html" aria-label="观看 无罪之凶">
+    <img src="6.jpg" alt="无罪之凶" loading="lazy">
+    <span class="movie-card__score">9.3</span>
+  </a>
+  <div class="movie-card__body">
+    <div class="movie-card__meta">
+      <span>2023</span>
+      <span>美国</span>
+      <span>电影</span>
+    </div>
+    <h3><a href="details/0006.html">无罪之凶</a></h3>
+      <p class="movie-card__desc">金牌辩护律师成功帮一个富二代脱罪,却在结案后发现了他是真凶的确凿证据。</p>
+    <div class="movie-card__tags">
+        <span>#法庭戏</span>
+        <span>#真凶逍遥</span>
+        <span>#道德困境</span>
+    </div>
+  </div>
+</article>
+<article class="movie-card" data-title="天元突破红莲螺岩" data-region="日本" data-year="2007" data-genre="科幻,动作,热血" data-category="奇幻科幻">
+  <a class="movie-card__cover" href="details/0007.html" aria-label="观看 天元突破红莲螺岩">
+    <img src="7.jpg" alt="天元突破红莲螺岩" loading="lazy">
+    <span class="movie-card__score">9.2</span>
+  </a>
+  <div class="movie-card__body">
+    <div class="movie-card__meta">
+      <span>2007</span>
+      <span>日本</span>
+      <span>TV剧集</span>
+    </div>
+    <h3><a href="details/0007.html">天元突破红莲螺岩</a></h3>
+      <p class="movie-card__desc">地下少年意外获得小型钻头机甲,从突破天花板开始一路战斗到宇宙尽头。</p>
+    <div class="movie-card__tags">
+        <span>#机甲</span>
+        <span>#钻头</span>
+        <span>#反抗</span>
+    </div>
+  </div>
+</article>
+<article class="movie-card" data-title="爱情起床号第二季" data-region="日本" data-year="2017" data-genre="爱情/喜剧/校园" data-category="海外佳作">
+  <a class="movie-card__cover" href="details/0008.html" aria-label="观看 爱情起床号第二季">
+    <img src="8.jpg" alt="爱情起床号第二季" loading="lazy">
+    <span class="movie-card__score">9.1</span>
+  </a>
+  <div class="movie-card__body">
+    <div class="movie-card__meta">
+      <span>2017</span>
+      <span>日本</span>
+      <span>电视剧</span>
+    </div>
+    <h3><a href="details/0008.html">爱情起床号第二季</a></h3>
+      <p class="movie-card__desc">青井和入江升入大学后开始同居,但一个情敌的出现和一封误发的邮件,让他们的关系面临最大危机。</p>
+    <div class="movie-card__tags">
+        <span>#日剧</span>
+        <span>#校园青春</span>
+        <span>#青梅竹马</span>
+    </div>
+  </div>
+</article>
+<article class="movie-card" data-title="密战2009" data-region="中国大陆" data-year="2024" data-genre="谍战,悬疑" data-category="悬疑推理">
+  <a class="movie-card__cover" href="details/0009.html" aria-label="观看 密战2009">
+    <img src="9.jpg" alt="密战2009" loading="lazy">
+    <span class="movie-card__score">9.1</span>
+  </a>
+  <div class="movie-card__body">
+    <div class="movie-card__meta">
+      <span>2024</span>
+      <span>中国大陆</span>
+      <span>剧集</span>
+    </div>
+    <h3><a href="details/0009.html">密战2009</a></h3>
+      <p class="movie-card__desc">2009年的江城,一场看似普通的网络泄密案,牵出了横跨十五年的间谍暗战。</p>
+    <div class="movie-card__tags">
+        <span>#无线电</span>
+        <span>#密码破译</span>
+        <span>#潜伏</span>
+    </div>
+  </div>
+</article>
+<article class="movie-card" data-title="青春同学会" data-region="中国大陆" data-year="2018" data-genre="剧情/喜剧" data-category="国产高分">
+  <a class="movie-card__cover" href="details/0010.html" aria-label="观看 青春同学会">
+    <img src="10.jpg" alt="青春同学会" loading="lazy">
+    <span class="movie-card__score">9.0</span>
+  </a>
+  <div class="movie-card__body">
+    <div class="movie-card__meta">
+      <span>2018</span>
+      <span>中国大陆</span>
+      <span>电影</span>
+    </div>
+    <h3><a href="details/0010.html">青春同学会</a></h3>
+      <p class="movie-card__desc">大学毕业二十周年聚会,昔日睡上下铺的四兄弟发现彼此都在羡慕对方的人生。</p>
+    <div class="movie-card__tags">
+        <span>#同学会</span>
+        <span>#中年危机</span>
+        <span>#攀比</span>
+    </div>
+  </div>
+</article>
+<article class="movie-card" data-title="救女心切" data-region="中国大陆" data-year="2025" data-genre="动作/犯罪/剧情" data-category="犯罪惊悚">
+  <a class="movie-card__cover" href="details/0011.html" aria-label="观看 救女心切">
+    <img src="11.jpg" alt="救女心切" loading="lazy">
+    <span class="movie-card__score">8.9</span>
+  </a>
+  <div class="movie-card__body">
+    <div class="movie-card__meta">
+      <span>2025</span>
+      <span>中国大陆</span>
+      <span>电影</span>
+    </div>
+    <h3><a href="details/0011.html">救女心切</a></h3>
+      <p class="movie-card__desc">身患绝症的父亲得知被绑架的女儿还活着,他在生命的最后24小时里,必须找出绑匪并完成一次不可能的营救。</p>
+    <div class="movie-card__tags">
+        <span>#父亲</span>
+        <span>#绑架</span>
+        <span>#极限营救</span>
+    </div>
+  </div>
+</article>
+<article class="movie-card" data-title="心碎情歌" data-region="美国" data-year="2024" data-genre="爱情,音乐,剧情" data-category="都市爱情">
+  <a class="movie-card__cover" href="details/0012.html" aria-label="观看 心碎情歌">
+    <img src="12.jpg" alt="心碎情歌" loading="lazy">
+    <span class="movie-card__score">8.7</span>
+  </a>
+  <div class="movie-card__body">
+    <div class="movie-card__meta">
+      <span>2024</span>
+      <span>美国</span>
+      <span>电影</span>
+    </div>
+    <h3><a href="details/0012.html">心碎情歌</a></h3>
+      <p class="movie-card__desc">一个过气歌手靠写“心碎情歌”再度翻红,但每一首爆款歌曲,都精准预言了前女友下一段恋情的悲剧结局。</p>
+    <div class="movie-card__tags">
+        <span>#音乐人</span>
+        <span>#虐恋</span>
+        <span>#创作灵感</span>
+    </div>
+  </div>
+</article>
+<article class="movie-card" data-title="永不退缩:反抗" data-region="美国" data-year="2025" data-genre="动作/剧情" data-category="家庭年代">
+  <a class="movie-card__cover" href="details/0013.html" aria-label="观看 永不退缩:反抗">
+    <img src="13.jpg" alt="永不退缩:反抗" loading="lazy">
+    <span class="movie-card__score">8.6</span>
+  </a>
+  <div class="movie-card__body">
+    <div class="movie-card__meta">
+      <span>2025</span>
+      <span>美国</span>
+      <span>电影</span>
+    </div>
+    <h3><a href="details/0013.html">永不退缩:反抗</a></h3>
+      <p class="movie-card__desc">一家即将被拆迁的社区拳馆,教练带着一群问题少年,用拳头对抗资本与强权。</p>
+    <div class="movie-card__tags">
+        <span>#格斗</span>
+        <span>#社会运动</span>
+        <span>#青年</span>
+    </div>
+  </div>
+</article>
+<article class="movie-card" data-title="青春应援" data-region="日本" data-year="2024" data-genre="校园,励志,歌舞" data-category="海外佳作">
+  <a class="movie-card__cover" href="details/0014.html" aria-label="观看 青春应援">
+    <img src="14.jpg" alt="青春应援" loading="lazy">
+    <span class="movie-card__score">8.5</span>
+  </a>
+  <div class="movie-card__body">
+    <div class="movie-card__meta">
+      <span>2024</span>
+      <span>日本</span>
+      <span>电影</span>
+    </div>
+    <h3><a href="details/0014.html">青春应援</a></h3>
+      <p class="movie-card__desc">一群没有运动神经的“书呆子”为了保住社团教室,被迫组建了一支史上最烂的啦啦队。</p>
+    <div class="movie-card__tags">
+        <span>#啦啦队</span>
+        <span>#废柴逆袭</span>
+        <span>#友情</span>
+    </div>
+  </div>
+</article>
+<article class="movie-card" data-title="陌生男子" data-region="韩国" data-year="2022" data-genre="惊悚,悬疑,心理" data-category="悬疑推理">
+  <a class="movie-card__cover" href="details/0015.html" aria-label="观看 陌生男子">
+    <img src="15.jpg" alt="陌生男子" loading="lazy">
+    <span class="movie-card__score">8.4</span>
+  </a>
+  <div class="movie-card__body">
+    <div class="movie-card__meta">
+      <span>2022</span>
+      <span>韩国</span>
+      <span>电影</span>
+    </div>
+    <h3><a href="details/0015.html">陌生男子</a></h3>
+      <p class="movie-card__desc">单身女子在家中发现陌生男子留下的物品,而所有监控都显示从未有人进入。</p>
+    <div class="movie-card__tags">
+        <span>#独居女性</span>
+        <span>#窥视者</span>
+        <span>#公寓暗网</span>
+    </div>
+  </div>
+</article>
+<article class="movie-card" data-title="亲情解锁" data-region="中国台湾" data-year="2025" data-genre="家庭、剧情、奇幻" data-category="家庭年代">
+  <a class="movie-card__cover" href="details/0016.html" aria-label="观看 亲情解锁">
+    <img src="16.jpg" alt="亲情解锁" loading="lazy">
+    <span class="movie-card__score">8.3</span>
+  </a>
+  <div class="movie-card__body">
+    <div class="movie-card__meta">
+      <span>2025</span>
+      <span>中国台湾</span>
+      <span>剧集</span>
+    </div>
+    <h3><a href="details/0016.html">亲情解锁</a></h3>
+      <p class="movie-card__desc">一家人的记忆被锁在废弃游戏厅里,每通过一个街机关卡,就能解锁一段被篡改的往事。</p>
+    <div class="movie-card__tags">
+        <span>#记忆回溯</span>
+        <span>#和解</span>
+        <span>#亲情催泪</span>
+    </div>
+  </div>
+</article>
+<article class="movie-card" data-title="天缘纳木错" data-region="中国大陆" data-year="2026" data-genre="爱情/剧情/公路" data-category="国产高分">
+  <a class="movie-card__cover" href="details/0017.html" aria-label="观看 天缘纳木错">
+    <img src="17.jpg" alt="天缘纳木错" loading="lazy">
+    <span class="movie-card__score">8.3</span>
+  </a>
+  <div class="movie-card__body">
+    <div class="movie-card__meta">
+      <span>2026</span>
+      <span>中国大陆</span>
+      <span>电影</span>
+    </div>
+    <h3><a href="details/0017.html">天缘纳木错</a></h3>
+      <p class="movie-card__desc">一个只想自杀的男人和一个只想拍星星的女人,在纳木错湖边相遇,他们都找到了第三选择。</p>
+    <div class="movie-card__tags">
+        <span>#西藏</span>
+        <span>#纳木错</span>
+        <span>#旅行爱情</span>
+    </div>
+  </div>
+</article>
+<article class="movie-card" data-title="内战圣伯纳犬" data-region="美国" data-year="2028" data-genre="剧情,战争,动物" data-category="奇幻科幻">
+  <a class="movie-card__cover" href="details/0018.html" aria-label="观看 内战圣伯纳犬">
+    <img src="18.jpg" alt="内战圣伯纳犬" loading="lazy">
+    <span class="movie-card__score">8.1</span>
+  </a>
+  <div class="movie-card__body">
+    <div class="movie-card__meta">
+      <span>2028</span>
+      <span>美国</span>
+      <span>电影</span>
+    </div>
+    <h3><a href="details/0018.html">内战圣伯纳犬</a></h3>
+      <p class="movie-card__desc">美国内战期间,一只圣伯纳犬在战场上不分阵营地拯救伤员,双方士兵为它两次停火。</p>
+    <div class="movie-card__tags">
+        <span>#美国内战</span>
+        <span>#人狗羁绊</span>
+        <span>#反战视角</span>
+    </div>
+  </div>
+</article>
+<article class="movie-card" data-title="花月" data-region="中国香港" data-year="2025" data-genre="文艺/同性" data-category="奇幻科幻">
+  <a class="movie-card__cover" href="details/0019.html" aria-label="观看 花月">
+    <img src="19.jpg" alt="花月" loading="lazy">
+    <span class="movie-card__score">9.8</span>
+  </a>
+  <div class="movie-card__body">
+    <div class="movie-card__meta">
+      <span>2025</span>
+      <span>中国香港</span>
+      <span>电影</span>
+    </div>
+    <h3><a href="details/0019.html">花月</a></h3>
+      <p class="movie-card__desc">1930 年香港石塘咀,头牌花魁爱上女保镖,而嫖客中有一位是她的未婚夫。</p>
+    <div class="movie-card__tags">
+        <span>#妓院</span>
+        <span>#女同</span>
+        <span>#民国</span>
+    </div>
+  </div>
+</article>
+<article class="movie-card" data-title="福冈恋爱白书7" data-region="日本" data-year="2025" data-genre="爱情/剧情" data-category="都市爱情">
+  <a class="movie-card__cover" href="details/0020.html" aria-label="观看 福冈恋爱白书7">
+    <img src="20.jpg" alt="福冈恋爱白书7" loading="lazy">
+    <span class="movie-card__score">9.7</span>
+  </a>
+  <div class="movie-card__body">
+    <div class="movie-card__meta">
+      <span>2025</span>
+      <span>日本</span>
+      <span>电影</span>
+    </div>
+    <h3><a href="details/0020.html">福冈恋爱白书7</a></h3>
+      <p class="movie-card__desc">在福冈的博多运河城,一位失意的落语家与一位盲人按摩女,共享了一场只靠声音和触感的恋爱。</p>
+    <div class="movie-card__tags">
+        <span>#纯爱</span>
+        <span>#地方风情</span>
+        <span>#励志</span>
+    </div>
+  </div>
+</article>
+<article class="movie-card" data-title="杰克布鲁克斯:怪兽杀手" data-region="加拿大" data-year="2007" data-genre="恐怖喜剧" data-category="喜剧治愈">
+  <a class="movie-card__cover" href="details/0021.html" aria-label="观看 杰克布鲁克斯:怪兽杀手">
+    <img src="21.jpg" alt="杰克布鲁克斯:怪兽杀手" loading="lazy">
+    <span class="movie-card__score">9.6</span>
+  </a>
+  <div class="movie-card__body">
+    <div class="movie-card__meta">
+      <span>2007</span>
+      <span>加拿大</span>
+      <span>电影</span>
+    </div>
+    <h3><a href="details/0021.html">杰克布鲁克斯:怪兽杀手</a></h3>
+      <p class="movie-card__desc">一个梦想成为摇滚明星的蓝领水管工,在一夜之间发现祖上竟是猎魔人,而他的家人全是被诅咒的怪物。</p>
+    <div class="movie-card__tags">
+        <span>#血浆</span>
+        <span>#黑色幽默</span>
+        <span>#草根英雄</span>
+    </div>
+  </div>
+</article>
+<article class="movie-card" data-title="表哥我来也" data-region="新加坡/马来西亚" data-year="2024" data-genre="喜剧,动作" data-category="喜剧治愈">
+  <a class="movie-card__cover" href="details/0022.html" aria-label="观看 表哥我来也">
+    <img src="22.jpg" alt="表哥我来也" loading="lazy">
+    <span class="movie-card__score">9.5</span>
+  </a>
+  <div class="movie-card__body">
+    <div class="movie-card__meta">
+      <span>2024</span>
+      <span>新加坡/马来西亚</span>
+      <span>电影</span>
+    </div>
+    <h3><a href="details/0022.html">表哥我来也</a></h3>
+      <p class="movie-card__desc">杀手“我来也”接到任务暗杀黑帮老大,结果发现老大是他失散多年的表哥。</p>
+    <div class="movie-card__tags">
+        <span>#东南亚</span>
+        <span>#黑帮</span>
+        <span>#乌龙</span>
+    </div>
+  </div>
+</article>
+<article class="movie-card" data-title="真情赤子心" data-region="美国" data-year="1999" data-genre="剧情、家庭、温情" data-category="海外佳作">
+  <a class="movie-card__cover" href="details/0023.html" aria-label="观看 真情赤子心">
+    <img src="23.jpg" alt="真情赤子心" loading="lazy">
+    <span class="movie-card__score">9.4</span>
+  </a>
+  <div class="movie-card__body">
+    <div class="movie-card__meta">
+      <span>1999</span>
+      <span>美国</span>
+      <span>电影</span>
+    </div>
+    <h3><a href="details/0023.html">真情赤子心</a></h3>
+      <p class="movie-card__desc">一个忙碌的华尔街精英被迫照顾患自闭症的儿子,他发现儿子能通过棒球比赛预测道琼斯指数。</p>
+    <div class="movie-card__tags">
+        <span>#父子关系</span>
+        <span>#自闭症儿童</span>
+        <span>#棒球</span>
+    </div>
+  </div>
+</article>
+<article class="movie-card" data-title="西伯利亚和他" data-region="俄罗斯" data-year="2019" data-genre="剧情,同性,悬疑" data-category="悬疑推理">
+  <a class="movie-card__cover" href="details/0024.html" aria-label="观看 西伯利亚和他">
+    <img src="24.jpg" alt="西伯利亚和他" loading="lazy">
+    <span class="movie-card__score">9.3</span>
+  </a>
+  <div class="movie-card__body">
+    <div class="movie-card__meta">
+      <span>2019</span>
+      <span>俄罗斯</span>
+      <span>电影</span>
+    </div>
+    <h3><a href="details/0024.html">西伯利亚和他</a></h3>
+      <p class="movie-card__desc">在西伯利亚荒原的军事哨所,一名沉默的士兵发现死去的战友复活归来,却带来了关于他们过去的黑暗秘密。</p>
+    <div class="movie-card__tags">
+        <span>#西伯利亚</span>
+        <span>#军人</span>
+        <span>#禁忌之恋</span>
+    </div>
+  </div>
+</article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="footer-brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">剧</span>
+        <span>国产高分剧集</span>
+      </a>
+      <p>国产高分电视剧页面整理口碑较好的国产剧内容，提供榜单式浏览与分类查看。</p>
+    </div>
+    <div>
+      <h3>热门分类</h3>
+      <ul>
+        <li><a href="category/guochan-gaofen.html">国产高分 <span>250</span></a></li>
+        <li><a href="category/xuanyi-tuijian.html">悬疑推理 <span>250</span></a></li>
+        <li><a href="category/qihuan-kehuan.html">奇幻科幻 <span>250</span></a></li>
+        <li><a href="category/dushi-aiqing.html">都市爱情 <span>250</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>站内入口</h3>
+      <ul>
+        <li><a href="categories.html">分类总览</a></li>
+        <li><a href="rankings.html">高分榜单</a></li>
+        <li><a href="search.html">搜索筛选</a></li>
+        <li><a href="sitemap.xml">站点地图</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 国产高分剧集 · 高清剧集在线观看</div>
+</footer>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
